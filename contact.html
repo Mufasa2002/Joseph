@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Joseph Amara Gbondo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+Mufasa<span>.</span>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html"><b>Home</b></a></li>
+
+<li><a href="about.html"><b>About</b></a></li>
+
+<li><a href="skills.html"><b>Skills</b></a></li>
+
+<li><a href="projects.html"><b>Projects</b></a></li>
+
+<li>
+<a href="contact.html"
+class="active">
+<b>Contact</b>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- CONTACT HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h3>GET IN TOUCH</h3>
+
+<h1>
+<b>Contact Me</b>
+</h1>
+
+<p>
+
+Interested in collaborating,
+connecting, discussing projects,
+technology, software engineering,
+or opportunities?
+
+Feel free to reach out.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT FORM -->
+
+<section class="about-preview">
+
+<center>
+<h2>Send A Message</h2>
+</center>
+
+<form id="contact-form" class="contact-form">
+
+<input
+type="text"
+name="from_name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+name="from_email"
+placeholder="Your Email"
+required>
+
+<textarea
+name="message"
+rows="7"
+placeholder="Your Message"
+required></textarea>
+
+<button
+type="submit"
+class="btn skyblue-btn">
+
+<h3>Send Message</h3>
+
+</button>
+
+</form>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="info-section">
+
+<div class="info-card">
+
+<h2><img src="images/gmail.png"
+        alt="Profile Image" width="60" height="60">
+    <b>Email</b></h2>
+
+<p>
+<a href="mailto:kingmufasa20002@gmail.com 
+ target=_blank" class="btn-outline">kingmufasa20002.com</a>
+
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h2><img src="images/GitHub.png"
+        alt="Profile Image" width="60" height="60">
+    <b>GitHub</b></h2>
+
+<p>
+
+<a href="https://github.com/mufasa2002
+ target=_blank" class="btn-outline">github.com/mufasa2002</a>
+
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h2><img src="images/whatsapp.png"
+        alt="Profile Image" width="60" height="60">
+    <b>WhatsApp</b></h2>
+
+<p>
+
+<a href="https://wa.me/23276608187" target="_blank" class="btn-outline">
+    +23276608187</a>
+
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <b>© 2026 Joseph Amara Gbondo [Mufasa]
+        | Software Engineering Portfolio</b>
+    </p>
+
+</footer>
+
+
+</body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("h9-DfHFgkG4be_drK");
+
+document
+.getElementById("contact-form")
+
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+
+"service_mmmlwtt",
+"template_sp1pfvo",
+this
+
+)
+
+.then(function(){
+
+alert("Message Sent Successfully!");
+
+document
+.getElementById("contact-form")
+.reset();
+
+})
+
+.catch(function(error){
+
+alert("Failed To Send Message.");
+
+console.log(error);
+
+});
+
+});
+
+</script>
+
+</html>
+
